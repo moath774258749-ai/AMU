@@ -1,0 +1,61 @@
+.card {
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-color);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.card.default:hover {
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+.card.interactive {
+  cursor: pointer;
+}
+
+.card.interactive:hover {
+  transform: translateY(-2px);
+  border-color: var(--border-glow);
+  box-shadow: var(--shadow-md);
+}
+
+.card.glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.card.gradient {
+  background: var(--gradient-card);
+}
+
+.card.highlight {
+  border-color: var(--primary);
+  background: linear-gradient(
+    135deg,
+    var(--primary-dim) 0%,
+    var(--bg-card) 50%
+  );
+}
+
+.cardHeader {
+  padding: 16px 16px 0;
+}
+
+.cardContent {
+  padding: 16px;
+}
+
+.cardFooter {
+  padding: 0 16px 16px;
+  display: flex;
+  gap: 8px;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { 
+    box-shadow: 0 0 10px var(--primary-glow);
+  }
+  50% { 
+    box-shadow: 0 0 25px var(--primary-glow);
+  }
+}

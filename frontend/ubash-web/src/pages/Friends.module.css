@@ -1,0 +1,221 @@
+.page {
+  min-height: 100vh;
+}
+
+.content {
+  padding: 0 16px 24px;
+}
+
+.subtitle {
+  color: var(--text-secondary);
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+/* Stats Row */
+.statsRow {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.statCard {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+}
+
+.statIcon {
+  color: var(--primary);
+}
+
+.statValue {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.statLabel {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+/* Link Card */
+.linkCard {
+  margin-bottom: 20px;
+}
+
+.linkTitle {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin: 0 0 12px;
+}
+
+.linkBox {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 12px 16px;
+  margin-bottom: 16px;
+  overflow: hidden;
+}
+
+.linkText {
+  font-size: 13px;
+  color: var(--primary);
+  word-break: break-all;
+}
+
+.linkActions {
+  display: flex;
+  gap: 12px;
+}
+
+.linkActions button {
+  flex: 1;
+}
+
+/* Section */
+.section {
+  margin-bottom: 20px;
+}
+
+.sectionTitle {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 12px;
+}
+
+/* Steps */
+.steps {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.stepIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  background: var(--primary-dim);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  flex-shrink: 0;
+}
+
+.stepText {
+  flex: 1;
+  font-size: 14px;
+  color: var(--text-primary);
+}
+
+.stepArrow {
+  color: var(--text-muted);
+  display: none;
+}
+
+/* Reward Card */
+.rewardCard {
+  margin-bottom: 20px;
+}
+
+.rewardContent {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.rewardIcon {
+  color: var(--success);
+}
+
+.rewardInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.rewardValue {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--success);
+}
+
+.rewardLabel {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+/* Friends List */
+.friendsList {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.friendItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.friendItem:last-child {
+  border-bottom: none;
+}
+
+.friendAvatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--gradient-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 16px;
+  color: white;
+}
+
+.friendInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.friendName {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.friendPoints {
+  font-size: 12px;
+  color: var(--text-muted);
+}

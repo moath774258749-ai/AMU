@@ -1,0 +1,288 @@
+.page {
+  min-height: 100vh;
+}
+
+.content {
+  padding: 0 16px 24px;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.tab {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 16px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  color: var(--text-secondary);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.tab:hover {
+  background: var(--bg-card-hover);
+}
+
+.tab.active {
+  background: var(--primary-dim);
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+/* Your Rank Card */
+.yourRankCard {
+  margin-bottom: 20px;
+}
+
+.yourRankContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.yourRankLeft {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.yourRankIcon {
+  color: var(--warning);
+}
+
+.yourRankInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.yourRankLabel {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.yourRankValue {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.yourRankStats {
+  text-align: right;
+}
+
+.yourRankPoints {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+/* Podium */
+.podium {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 24px;
+  padding-top: 20px;
+}
+
+.podiumItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  width: 90px;
+}
+
+.podiumAvatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--bg-card);
+  border: 2px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.first .podiumAvatar {
+  width: 60px;
+  height: 60px;
+  border-color: #FFD700;
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.2) 0%, var(--bg-card) 100%);
+}
+
+.second .podiumAvatar {
+  border-color: #C0C0C0;
+  background: linear-gradient(135deg, rgba(192, 192, 192, 0.2) 0%, var(--bg-card) 100%);
+}
+
+.third .podiumAvatar {
+  border-color: #CD7F32;
+  background: linear-gradient(135deg, rgba(205, 127, 50, 0.2) 0%, var(--bg-card) 100%);
+}
+
+.podiumName {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-primary);
+  text-align: center;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.podiumScore {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.podiumBar {
+  width: 100%;
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-bottom: none;
+}
+
+.first .podiumBar {
+  height: 100px;
+  background: linear-gradient(180deg, rgba(255, 215, 0, 0.2) 0%, var(--bg-card) 100%);
+  border-color: rgba(255, 215, 0, 0.3);
+}
+
+.second .podiumBar {
+  height: 70px;
+  background: linear-gradient(180deg, rgba(192, 192, 192, 0.2) 0%, var(--bg-card) 100%);
+  border-color: rgba(192, 192, 192, 0.3);
+}
+
+.third .podiumBar {
+  height: 50px;
+  background: linear-gradient(180deg, rgba(205, 127, 50, 0.2) 0%, var(--bg-card) 100%);
+  border-color: rgba(205, 127, 50, 0.3);
+}
+
+.gold { color: #FFD700; }
+.silver { color: #C0C0C0; }
+.bronze { color: #CD7F32; }
+
+/* List */
+.list {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.listItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border-color);
+  transition: background 0.2s ease;
+}
+
+.listItem:last-child {
+  border-bottom: none;
+}
+
+.listItem.currentUser {
+  background: var(--primary-dim);
+}
+
+.listRank {
+  width: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rankNumber {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.listAvatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--gradient-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 14px;
+  color: white;
+}
+
+.listInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.listName {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.listLevel {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.listScore {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+/* Empty State */
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 24px;
+  text-align: center;
+  color: var(--text-muted);
+}
+
+.emptyIcon {
+  color: var(--text-muted);
+  margin-bottom: 16px;
+  opacity: 0.5;
+}
+
+/* Total Users */
+.totalUsers {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 13px;
+  color: var(--text-muted);
+}

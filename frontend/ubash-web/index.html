@@ -3,9 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ubash-web</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="theme-color" content="#0B1120" />
+    <meta name="description" content="Ubash - Earn rewards in the Web3 ecosystem" />
+    <title>Ubash - Web3 Rewards</title>
+    
+    <!-- Telegram WebApp Script -->
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    
+    <style>
+      /* Critical CSS for faster initial render */
+      :root {
+        --bg-primary: #0B1120;
+        --primary: #19E3FF;
+        --secondary: #7C5CFF;
+      }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { 
+        background: #0B1120;
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      }
+      #app { min-height: 100vh; }
+    </style>
   </head>
   <body>
     <div id="app"></div>

@@ -1,0 +1,266 @@
+.page {
+  min-height: 100vh;
+}
+
+.content {
+  padding: 0 16px 24px;
+}
+
+.subtitle {
+  color: var(--text-secondary);
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+/* Streak Card */
+.streakCard {
+  margin-bottom: 20px;
+}
+
+.streakContent {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.streakIcon {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-md);
+  background: linear-gradient(135deg, var(--warning) 0%, #ff6b00 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.streakInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.streakLabel {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.streakValue {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+/* Countdown */
+.countdownSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 20px;
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  margin-bottom: 20px;
+}
+
+.clockIcon {
+  color: var(--text-muted);
+}
+
+.countdownLabel {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.countdown {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.countdownItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.countdownValue {
+  font-family: var(--font-display);
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.countdownUnit {
+  font-size: 10px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.countdownSeparator {
+  font-size: 24px;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+
+/* Days Grid */
+.daysGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.dayCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 12px 8px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  transition: all 0.2s ease;
+}
+
+.dayCard.completed {
+  background: var(--success-dim);
+  border-color: var(--success);
+}
+
+.dayCard.completed .dayIcon {
+  color: var(--success);
+}
+
+.dayCard.current {
+  background: var(--primary-dim);
+  border-color: var(--primary);
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.dayCard.current .dayIcon {
+  color: var(--primary);
+}
+
+.dayCard.special {
+  grid-column: span 2;
+  background: linear-gradient(135deg, var(--warning-dim) 0%, var(--bg-card) 100%);
+  border-color: var(--warning);
+}
+
+.dayCard.special .dayIcon {
+  color: var(--warning);
+}
+
+.dayNumber {
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.dayIcon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+}
+
+.dayReward {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.specialBadge {
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--warning);
+  background: var(--warning-dim);
+  padding: 2px 6px;
+  border-radius: var(--radius-full);
+}
+
+/* Claim Section */
+.claimSection {
+  padding: 0 16px;
+}
+
+/* Success Modal */
+.successModal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+  padding: 24px;
+}
+
+.successContent {
+  background: var(--bg-card);
+  border-radius: var(--radius-xl);
+  padding: 32px;
+  text-align: center;
+  max-width: 300px;
+  width: 100%;
+}
+
+.successIcon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 16px;
+  border-radius: 50%;
+  background: var(--gradient-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  animation: float 2s ease-in-out infinite;
+}
+
+.successTitle {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 16px;
+}
+
+.successReward {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: var(--font-display);
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--success);
+  margin-bottom: 12px;
+}
+
+.successText {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { 
+    box-shadow: 0 0 10px var(--primary-glow);
+  }
+  50% { 
+    box-shadow: 0 0 25px var(--primary-glow);
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}

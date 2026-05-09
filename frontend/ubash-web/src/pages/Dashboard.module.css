@@ -1,0 +1,239 @@
+.dashboard {
+  min-height: 100vh;
+}
+
+.content {
+  padding: 0 16px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Points Card */
+.pointsCard {
+  background: linear-gradient(135deg, var(--bg-card) 0%, rgba(25, 227, 255, 0.1) 100%);
+  border: 1px solid var(--primary);
+}
+
+.pointsContent {
+  text-align: center;
+}
+
+.pointsHeader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.pointsLabel {
+  font-size: 14px;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.pointsIcon {
+  color: var(--primary);
+}
+
+.pointsValue {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.pointsNumber {
+  font-family: var(--font-display);
+  font-size: 48px;
+  font-weight: 700;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.pointsUnit {
+  font-size: 18px;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.pointsFooter {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.statItem {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.statIcon {
+  color: var(--primary);
+}
+
+/* Streak Banner */
+.streakBanner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  background: linear-gradient(135deg, var(--success-dim) 0%, var(--bg-card) 100%);
+  border: 1px solid var(--success);
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.streakBanner:hover {
+  transform: translateY(-2px);
+}
+
+.streakContent {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.streakIcon {
+  color: var(--success);
+}
+
+.streakText {
+  display: flex;
+  flex-direction: column;
+}
+
+.streakTitle {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.streakSubtitle {
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+/* Section */
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sectionTitle {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+/* Actions Grid */
+.actionsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.actionCard {
+  height: 100%;
+}
+
+.actionContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 20px 12px;
+}
+
+.actionIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.actionIcon.primary {
+  background: var(--primary-dim);
+  color: var(--primary);
+}
+
+.actionIcon.secondary {
+  background: var(--secondary-dim);
+  color: var(--secondary);
+}
+
+.actionIcon.success {
+  background: var(--success-dim);
+  color: var(--success);
+}
+
+.actionIcon.warning {
+  background: var(--warning-dim);
+  color: var(--warning);
+}
+
+.badge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  width: 18px;
+  height: 18px;
+  background: var(--danger);
+  color: white;
+  font-size: 10px;
+  font-weight: 700;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.actionLabel {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-primary);
+  text-align: center;
+}
+
+/* Stats Grid */
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.statCard {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.statValue {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.statLabel {
+  font-size: 11px;
+  color: var(--text-muted);
+  text-align: center;
+}

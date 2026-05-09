@@ -1,18 +1,39 @@
 {
-  "name": "amu",
+  "name": "ubash-backend",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "keywords": [
+    "telegram",
+    "bot",
+    "web3",
+    "rewards"
+  ],
   "author": "",
   "license": "ISC",
-  "description": "",
+  "description": "Ubash Telegram Bot Backend",
   "dependencies": {
+    "@vitejs/plugin-react": "^6.0.1",
+    "axios": "^1.16.0",
     "cors": "^2.8.6",
+    "crypto-js": "^4.2.0",
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
-    "telegraf": "^4.16.3"
+    "framer-motion": "^12.38.0",
+    "lucide-react": "^1.14.0",
+    "mongoose": "^8.5.0",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6",
+    "react-router-dom": "^7.15.0",
+    "telegraf": "^4.16.3",
+    "vite": "^8.0.11",
+    "zustand": "^5.0.13"
+  },
+  "engines": {
+    "node": ">=18.0.0"
   }
 }
