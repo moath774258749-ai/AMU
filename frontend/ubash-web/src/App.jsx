@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { SpeedInsights } from '@vercel/speed-insights/react';
 
 function App() {
   const [user, setUser] = useState(null);
@@ -28,6 +29,7 @@ function App() {
         <button>📋 Tasks</button>
         <button>💰 Points</button>
       </div>
+      <SpeedInsights />
     </div>
   );
 }
