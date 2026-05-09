@@ -21,13 +21,13 @@ export async function GET(request: NextRequest) {
         const completions = await sql`
           SELECT task_id FROM ubash_task_completions WHERE user_id = ${user[0].id}
         `;
-        completedTaskIds = completions.map((c: { task_id: number }) => c.task_id);
+        completedTaskIds = completions.map((c) => (c as { task_id: number }).task_id);
       }
     }
 
-    const tasksWithStatus = tasks.map((task: { id: number }) => ({
+    const tasksWithStatus = tasks.map((task) => ({
       ...task,
-      completed: completedTaskIds.includes(task.id),
+      completed: completedTaskIds.includes((task as { id: number }).id),
     }));
 
     return NextResponse.json(tasksWithStatus);

@@ -40,7 +40,7 @@ export async function GET(request: NextRequest) {
     return NextResponse.json({
       leaderboard,
       user_rank: userRank,
-      total_users: parseInt(totalResult[0].total),
+      total_users: parseInt(String(totalResult[0].total)),
     });
   } catch (error) {
     console.error("Error fetching leaderboard:", error);

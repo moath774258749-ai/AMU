@@ -42,7 +42,7 @@ export async function GET(request: NextRequest) {
       referral_code: user.referral_code,
       referral_link: referralLink,
       total_referrals: referrals.length,
-      total_earnings: parseInt(earningsResult[0].total) || 0,
+      total_earnings: parseInt(String(earningsResult[0].total)) || 0,
       referrals: referrals,
     });
   } catch (error) {

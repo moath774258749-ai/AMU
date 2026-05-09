@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { sql } from "@/lib/db";
+import { sql, User } from "@/lib/db";
 
 const DAILY_REWARDS = [10, 20, 30, 50, 75, 100, 150]; // Day 1-7 rewards
 
@@ -19,8 +19,8 @@ export async function GET(request: NextRequest) {
       return NextResponse.json({ error: "User not found" }, { status: 404 });
     }
 
-    const user = users[0];
-    const lastClaim = user.last_daily_claim ? new Date(user.last_daily_claim) : null;
+    const user = users[0] as unknown as User;
+    const lastClaim = user.last_daily_claim ? new Date(user.last_daily_claim as unknown as string) : null;
     const now = new Date();
     
     let canClaim = true;
@@ -72,8 +72,8 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: "User not found" }, { status: 404 });
     }
 
-    const user = users[0];
-    const lastClaim = user.last_daily_claim ? new Date(user.last_daily_claim) : null;
+    const user = users[0] as unknown as User;
+    const lastClaim = user.last_daily_claim ? new Date(user.last_daily_claim as unknown as string) : null;
     const now = new Date();
 
     // Check if can claim

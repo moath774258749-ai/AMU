@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { CheckCircle, ExternalLink, Star, Send, Twitter, Users, User, Play, Calendar, Coins } from "lucide-react";
+import { CheckCircle, ExternalLink, Star, Send, MessageCircle, Users, User, Play, Calendar, Coins } from "lucide-react";
 import { useTelegram } from "@/components/telegram-provider";
 
 interface Task {
@@ -21,7 +21,7 @@ interface Task {
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   star: Star,
   send: Send,
-  twitter: Twitter,
+  twitter: MessageCircle,
   users: Users,
   user: User,
   play: Play,

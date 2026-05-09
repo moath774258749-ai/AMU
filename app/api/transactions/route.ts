@@ -37,7 +37,7 @@ export async function GET(request: NextRequest) {
 
     return NextResponse.json({
       transactions,
-      total: parseInt(countResult[0].total),
+      total: parseInt(String(countResult[0].total)),
       limit,
       offset,
     });

@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { sql, generateReferralCode } from "@/lib/db";
+import { sql, generateReferralCode, User } from "@/lib/db";
 
 const BOT_TOKEN = process.env.BOT_TOKEN!;
 const WEBAPP_URL = process.env.WEBAPP_URL || process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000";
@@ -51,7 +51,7 @@ export async function POST(request: NextRequest) {
     const { message } = update;
     const chatId = message.chat.id;
     const userId = message.from.id;
-    const text = message.text;
+    const text = message.text!;
     const username = message.from.username;
     const firstName = message.from.first_name;
     const lastName = message.from.last_name;
@@ -140,7 +140,7 @@ Click the button below to open the app:
       if (users.length === 0) {
         await sendMessage(chatId, "Please use /start first to create your account.\nالرجاء استخدام /start أولاً لإنشاء حسابك.");
       } else {
-        const user = users[0];
+        const user = users[0] as unknown as User;
         await sendMessage(
           chatId,
           `💰 <b>Your Balance | رصيدك</b>\n\n${user.points.toLocaleString()} UB Points\n\n🔥 Daily Streak: ${user.daily_streak} days\n🔥 السلسلة اليومية: ${user.daily_streak} أيام`
@@ -159,7 +159,7 @@ Click the button below to open the app:
       if (users.length === 0) {
         await sendMessage(chatId, "Please use /start first.\nالرجاء استخدام /start أولاً.");
       } else {
-        const user = users[0];
+        const user = users[0] as unknown as User;
         const botUsername = process.env.BOT_USERNAME || "UbashBot";
         const referralLink = `https://t.me/${botUsername}?start=${user.referral_code}`;
 
